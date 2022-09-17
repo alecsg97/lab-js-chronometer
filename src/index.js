@@ -11,23 +11,23 @@ let centisecDec = document.getElementById('centisecDec');
 let centisecUni = document.getElementById('centisecUni');
 let splits = document.getElementById('splits');
 
-function printTime() {
-  printMinutes();
-  printSeconds();
-  printCentiseconds();
+function printTime(minutes, seconds, centiseconds) {
+  printMinutes(minutes);
+  printSeconds(seconds);
+  printCentiseconds(centiseconds);
 }
 
-function printMinutes() {
+function printMinutes(minutes) {
   minUni.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getMinutes())[1];
   minDec.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getMinutes())[0];
 }
 
-function printSeconds() {
+function printSeconds(seconds) {
   secUni.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getSeconds())[1];
   secDec.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getSeconds())[0];
 }
 
-function printCentiseconds() {
+function printCentiseconds(centiseconds) {
   centisecUni.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getCentiseconds())[1];
   centisecDec.innerHTML = chronometer.computeTwoDigitNumber(chronometer.getCentiseconds())[0];
 }
